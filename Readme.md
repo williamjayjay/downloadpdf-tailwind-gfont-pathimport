@@ -19,7 +19,7 @@
 <p align="center">Download PDF é um app que podemos testar a funcionalidade de baixar e visualizar PDF no React Native.<br/><strong>Está é apenas uma POC de React Native</strong>.</p>
 
 <p align="center">
-<img alt="Olympus News" src="https://img.freepik.com/vetores-gratis/conjunto-de-pessoas-e-elementos-do-antigo-imperio-romano-soldados-mulheres-guerreiras-imperador-colunas-cidadaos-senador-em-fundo-branco_575670-1254.jpg?w=1380&t=st=1707880477~exp=1707881077~hmac=49cfea368b757a3ae20c352d3852e2bcf5c3bf7f848e6120bda6a42537e32448" />
+<img alt="App Download PDF" src="github/cover.png" />
 </p>
 
 ## 🥶 Sobre o projeto
@@ -78,10 +78,5 @@ A parte de notícias está implementada utilizando mock, este CRUD está totalme
 Desenvolvi o aplicativo com o mínimo de telas possível, concentrando todas as funcionalidades em uma única interface.
 
 <p align="center">
-<img alt="Download PDF APP" src="github/cover.png" />
-</p>
-
-## Gif demonstrando a funcionalidade implementada em pleno funcionamento.
-<p align="center">
-  <img alt="Animated Web Demonstration" title="#Web" src="github/demo_bg.gif" width="100%">
+  <img alt="Animated Web Demonstration" title="#Web" src="github/demo_bg.gif" width="100%" height="200px">
 </p>
