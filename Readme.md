@@ -63,9 +63,6 @@ Para inicializar o **mobile**, basta seguir as instruções abaixo:
    ```
 
 
-## Usage
-
-A parte de notícias está implementada utilizando mock, este CRUD está totalmente administrado pelo APP Atena. A parte do CRUD de usuário ainda está apenas como API REST 🥶 mas pretendo implementar a funcionalidade no APP.
 
 ## Roadmap
 
@@ -78,5 +75,5 @@ A parte de notícias está implementada utilizando mock, este CRUD está totalme
 Desenvolvi o aplicativo com o mínimo de telas possível, concentrando todas as funcionalidades em uma única interface.
 
 <p align="center">
-  <img alt="Animated Web Demonstration" title="#Web" src="github/demo_bg.gif" width="100%" height="200px">
+  <img alt="Animated Web Demonstration" title="#Web" src="github/demo_bg.gif" >
 </p>
