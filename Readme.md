@@ -1,18 +1,18 @@
-<h1 align="center">😇 Download PDF (tailwind, expo font, typescript, path import)</h1>
+<h1 align="center">😇 React Native - Download PDF (tailwind, expo font, typescript, path import)</h1>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/williamjayjay/downloadpdf-tailwind-gfont-pathimport">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/williamjayjay/react-native-download-pdf-tailwind-gfont-pathimport">
 
-  <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/williamjayjay/downloadpdf-tailwind-gfont-pathimport" />
+  <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/williamjayjay/react-native-download-pdf-tailwind-gfont-pathimport" />
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/williamjayjay/downloadpdf-tailwind-gfont-pathimport">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/williamjayjay/react-native-download-pdf-tailwind-gfont-pathimport">
   
   <a href="https://github.com/williamjayjay/Github-Blog/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/williamjayjay/downloadpdf-tailwind-gfont-pathimport">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/williamjayjay/react-native-download-pdf-tailwind-gfont-pathimport">
   </a>
     
-   <a href="https://github.com/williamjayjay/downloadpdf-tailwind-gfont-pathimport/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/williamjayjay/downloadpdf-tailwind-gfont-pathimport?style=social">
+   <a href="https://github.com/williamjayjay/react-native-download-pdf-tailwind-gfont-pathimport/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/williamjayjay/react-native-download-pdf-tailwind-gfont-pathimport?style=social">
   </a>
 </p>
 
@@ -54,7 +54,7 @@ Para inicializar o **mobile**, basta seguir as instruções abaixo:
 
 1. Clone o repositório:
    ```sh
-   git clone https://github.com/williamjayjay/downloadpdf-tailwind-gfont-pathimport
+   git clone https://github.com/williamjayjay/react-native-download-pdf-tailwind-gfont-pathimport
    ```
 
 2. Instale os módulos do YARN:
