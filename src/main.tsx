@@ -15,7 +15,7 @@ export const App: FC<IMain.Input> = (props = { awaitSplashTimer: 1000 }) => {
         <>
             <StatusBar
                 translucent
-                barStyle="dark-content"
+                barStyle="light-content"
                 backgroundColor="transparent"
             />
             <Dash />
