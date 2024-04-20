@@ -1,9 +1,8 @@
-import { StatusBar } from 'react-native';
-import { Home } from './screens/Home';
-import { IMain } from './main.dto';
-import { FC } from 'react';
-import { useMain } from './main.hook';
-
+import { StatusBar } from "react-native";
+import { Dash } from "./screens/Dash";
+import { IMain } from "./main.dto";
+import { FC } from "react";
+import { useMain } from "./main.hook";
 
 export const App: FC<IMain.Input> = (props = { awaitSplashTimer: 1000 }) => {
     const { isLoaded } = useMain(props);
@@ -19,8 +18,7 @@ export const App: FC<IMain.Input> = (props = { awaitSplashTimer: 1000 }) => {
                 barStyle="dark-content"
                 backgroundColor="transparent"
             />
-            <Home />
+            <Dash />
         </>
-
     );
 };
