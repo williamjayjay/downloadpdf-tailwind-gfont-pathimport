@@ -1,6 +1,7 @@
 
 export interface ICandle {
-    currency: string
+    _id: string;
+    currency?: string
     finalDateTime: Date
     open: number
     close: number

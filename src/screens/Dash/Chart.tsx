@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Dimensions, StyleSheet, TouchableOpacity, View, Text } from "react-native";
 import { Svg } from "react-native-svg";
 import { scaleLinear } from "d3-scale";
@@ -15,8 +15,7 @@ import Animated, {
   withTiming,
 } from 'react-native-reanimated';
 import { ICandle } from "@/models/CandleModel";
-import Candle from "./Candle";
-
+import { CandleIndividual } from "@/components/Candle";
 interface ChartProps {
   candles: ICandle[];
   domain: [number, number];
@@ -36,7 +35,7 @@ export const getColor = (color: string) => {
 export default ({ candles, domain, numberGrid }: any) => {
 
   const [selectedCandle, setSelectedCandle] = useState(null)
-  const [dataSelected, setDataSelected] = useState(null)
+  const [dataSelected, setDataSelected] = useState<ICandle | null>(null);
 
 
   const width = size / candles.length;
@@ -45,8 +44,6 @@ export default ({ candles, domain, numberGrid }: any) => {
     .domain([0, Math.max(...domain) - Math.min(...domain)])
     .range([0, size]);
 
-
-  // ------------------
 
   const animatedRef = useAnimatedRef();
   const altura = useSharedValue(0);
@@ -104,15 +101,36 @@ export default ({ candles, domain, numberGrid }: any) => {
 
       }} >
 
-        <View>
-          <Text numberOfLines={1} className=" text-white font-semibold text-lg"  >Open: $ {dataSelected?.open || '-'}</Text>
-          <Text numberOfLines={1} className=" text-white font-semibold text-lg"  >Close: $ {dataSelected?.close || '-'}</Text>
-          <Text numberOfLines={1} className=" text-white  text-sm"  >Time: {dateTimeSelect}</Text>
+        <View className="items-start" >
+          <View className="items-center justify-center gap-2 flex-row" >
+            <Text numberOfLines={1} className=" text-neutral-400  text-lg"  >Open: $</Text>
+            <Text numberOfLines={1} className=" text-white font-semibold text-lg"  >{dataSelected?.open || '-'}</Text>
+          </View>
+
+          <View className="items-center justify-center gap-2 flex-row" >
+            <Text numberOfLines={1} className=" text-neutral-400  text-lg"  >Close: $</Text>
+            <Text numberOfLines={1} className=" text-white font-semibold text-lg"  >{dataSelected?.close || '-'}</Text>
+          </View>
+
+          <View className="items-center justify-center gap-2 flex-row" >
+            <Text numberOfLines={1} className=" text-neutral-400 text-sm"  >Time: $</Text>
+            <Text numberOfLines={1} className=" text-white text-sm"  >{dateTimeSelect}</Text>
+          </View>
+
         </View>
 
         <View>
-          <Text numberOfLines={1} className=" text-white font-semibold text-lg"  >High: $ {dataSelected?.high || '-'}</Text>
-          <Text numberOfLines={1} className=" text-white font-semibold text-lg"  >Low: $ {dataSelected?.low || '-'}</Text>
+
+          <View className="items-center justify-center gap-2 flex-row" >
+            <Text numberOfLines={1} className=" text-signal-200  text-lg"  >High: $</Text>
+            <Text numberOfLines={1} className=" text-signal-200 font-semibold text-lg"  >{dataSelected?.high || '-'}</Text>
+          </View>
+
+          <View className="items-center justify-center gap-2 flex-row" >
+            <Text numberOfLines={1} className=" text-signal-300  text-lg"  >Low: $</Text>
+            <Text numberOfLines={1} className=" text-signal-300 font-semibold text-lg"  >{dataSelected?.low || '-'}</Text>
+          </View>
+
         </View>
 
 
@@ -123,7 +141,7 @@ export default ({ candles, domain, numberGrid }: any) => {
         {candles?.map((candle: any, index: any) => {
 
           return (
-            < Candle
+            <CandleIndividual
               key={candle._id}
               {...{ candle, index, width, scaleY, scaleBody }}
             />
@@ -158,17 +176,13 @@ export default ({ candles, domain, numberGrid }: any) => {
 
                 setSelectedCandle(selectedCandle === candle._id ? null : candle._id)
                 setDataSelected(dataSelected?._id === candle._id ? null : candle)
-                // alert('Preço: ' + candle.close?.toFixed(2) + 'horas: ' + candle?.date)
               }} >
               <Text numberOfLines={1} className="text-main-50  " style={{ color: getColor(candle.color) }} >{candle.close?.toFixed(2)}</Text>
               <Text numberOfLines={1} className=" " style={{ color: selectedCandle === candle._id ? "#FFBF00" : "#555" }} >{index}</Text>
 
               <Ionicons name={selectedCandle === candle._id ? "chevron-up" : "chevron-down"} size={20} color={selectedCandle === candle._id ? "#FFBF00" : "#555"} />
-              {/* <Ionicons name="chevron-down" size={24} color="black" /> */}
             </TouchableOpacity>
           )
-
-
         })}
 
       </View>
@@ -178,20 +192,13 @@ export default ({ candles, domain, numberGrid }: any) => {
 };
 
 
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
   box: {
-
-    // height: 200,
-    // width: 400,
-    // flexDirection: 'column',
     justifyContent: "space-between",
     flex: 1,
-    // alignItems: 'flex-end'
-
   },
   label: {
     fontSize: 24,
